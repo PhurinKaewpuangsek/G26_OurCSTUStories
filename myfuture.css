@@ -1,0 +1,94 @@
+/* FUTURE-PART-START */
+
+
+/* myfuture_Body-and-banner_start */
+.futurebody
+{
+   height: 100%;
+}
+
+.futurebanner
+{
+    background-image: url(/G26_OurCSTUStories/resources/bg6.jpg);
+    background-repeat: no-repeat;
+    background-size: 200vh;
+    height: 130vh;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding-top: 80px;
+    display: flex;
+}
+
+.futurebanner-info
+{
+    width: 45%;
+    height: 85%;
+    padding: 20px;
+    background: rgba(0, 0, 50, 0.7); 
+    border: 2px solid rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7), 0 0 50px rgba(0, 255, 255, 0.5);
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    animation: glow2 1.5s infinite alternate;
+    align-content: center;
+}
+
+@keyframes glow2
+{
+    from 
+    {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+    to 
+    {
+        box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+    }
+}
+
+.futurebanner-info h1 
+{
+    font-size: 2rem;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.futurebanner-info h2
+{
+    font-size: 1rem;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+.futurebanner-info p
+{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+    padding: 30px;
+}
+/* myfuture_Body-and-banner_end */
+
+/* myfuture_quote_start */
+.quote-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quote 
+{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333; 
+    padding: 20px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* myfuture_quote_end */
+
+
+/* FUTURE-PART-END */

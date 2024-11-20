@@ -1,0 +1,493 @@
+/* HOMEPAGE-PART-START */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 27px; 
+  width: 100%;     
+  z-index: 1000;    
+  position: fixed;
+  background: rgba(255, 255, 255, 0.308); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topbar a                         
+{
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+.topbar img                     
+{
+   display: none;
+}
+
+.menuwrap
+{
+    display: block;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; 
+    margin-left: -150px;
+    margin-top: 20px;
+}
+
+.menuwrap .menu                         
+{
+   list-style: none;
+}
+
+.menuwrap .menu li                     
+{
+    margin: 10px 0;         
+}
+
+.menuwrap .menu li a                            
+{
+   text-decoration: none;     
+   color: black;
+   padding: 10px;
+   display: block;
+}
+
+.menu-toggle
+{
+    display: none;
+}
+
+.menu-icon
+{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    
+}
+
+.menu-icon span
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px 0;
+    transition: transform 0.3s ease; 
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(1)
+{
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(2)
+{
+    opacity: 0; 
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(3)
+{
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle:checked + .menu-icon + .menuwrap 
+{
+    max-height: 300px; 
+    transition: max-height 0.5s ease-in;
+}
+
+/* Responsive styles for nav bar */
+@media (min-width: 780px)
+{
+    .menuwrap {
+        max-height: none; 
+    }
+
+    .menuwrap ul {
+        display: flex;
+    }
+
+    .menuwrap ul li {
+        margin: 0 15px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .topbar img
+    {
+       width: 150px;
+       position: fixed;
+       top: -5.5px;
+       left: 230px
+    }
+
+    .topbar img
+    {
+      display: inline-block;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce{
+       from 
+       {
+          transform: translateY(0);
+       }
+       to 
+       {
+        transform: translateY(-5px);
+       }
+    }
+}
+
+.indexbody
+{
+   height: 100%;
+}
+
+.menuwrap .menu li, .topbar a
+{
+    text-shadow: 2px 2px #666;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menuwrap .menu li:hover, .topbar a:hover
+{
+    color: #ffffff;
+    text-shadow: 2px 2px #2DE7F4, 4px 4px #0095EA;
+}
+
+.indexbanner
+{
+    background-image: url(/G26_OurCSTUStories/resources/bg4.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    padding-top: 80px;
+}
+
+.banner-info
+{
+    width: 100vh;
+    color: #ffffff;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    padding: 40px;
+}
+
+.banner-info h1
+{
+    font-size: 48px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: glow1 1.5s infinite alternate;
+}
+
+@keyframes glow1
+{
+    from 
+    {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    to 
+    {
+        text-shadow: 2px 2px 15px rgba(255, 255, 255, 1);
+    }
+}
+
+.indexbanner-info
+{
+    width: 100vh;
+    height: 50vh;
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    padding: 100px;
+}
+
+
+.indexbanner-info h1
+{
+   font-size: 42px;
+   font-size: clamp(1.875rem, 1.602rem + 1.364vw, 2.625rem);
+   text-align: center;
+   margin-bottom: 5rem;
+}
+
+.indexbanner a 
+{
+   display: block;
+   width: 220px;
+   height: 40px;
+   margin: 0.5rem;
+   margin-top: 2rem;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: #1a1a1a;
+   color: #f2f2f2;
+   padding: 0.5rem 1.5rem;
+   text-decoration: none; 
+   text-align: center;
+   border: 3px solid #f2f2f2;
+   border-radius: 4px;
+   transition: background-color 0.2s ease, color 0.2s ease;
+   margin-bottom: 2rem;
+}
+
+.indexbanner a:hover 
+{
+   background-color: #f2f2f2; 
+   color: #1a1a1a; 
+   border-color: #1a1a1a; 
+}
+
+.banner-info h1
+{
+    text-align: center;
+    font-size: 50px;
+    margin: 50px;
+}
+
+.indexbanner-info p
+{
+    margin: 20px;
+    font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
+}
+
+.banner-info p
+{
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#aboutme
+{
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77); 
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 125vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box1
+{
+    display: flex;
+    background-color: rgba(13, 27, 42, 0.85);
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 960px;
+    box-shadow: 0 0 50px rgba(70, 130, 180, 0.8);
+    transform: translate(-7px, -7px);
+    transition: all 0.3s ease;
+}
+
+.box2
+{
+    display: flex;
+    background-color: rgba(13, 27, 42, 0.85);
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transform: translate(-7px, -7px);
+    transition: all 0.3s ease;
+}
+
+
+video
+{
+    display: flex;
+    width: 200px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.box1 img
+{
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    margin-right: 20px;
+    image-rendering: pixelated;
+}
+
+.about-text1 h2
+{
+    font-size: 36px;
+    font-size: clamp(0.938rem, 0.46rem + 2.386vw, 2.25rem);
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.about-text2 h2
+{
+    font-size: 36px;
+    font-size: clamp(0.938rem, 0.46rem + 2.386vw, 2.25rem);
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+  
+.about-text1 p, .about-text2 p
+{
+    font-size: 15px;
+    font-size: clamp(0.563rem, 0.426rem + 0.682vw, 0.938rem);
+    padding: 5px;
+}
+
+.progress-container 
+{
+    background-color: #415a77;;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px 0;
+    border: 4px solid #000;
+}
+
+.progress-bar 
+{
+    height: 20px;
+    background-color: #1f6f8b;
+    width: 25%;
+    text-align: center;
+}
+
+.progress-bar p
+{
+    font-size: 10px;
+    padding: 5px;
+}
+
+.badge
+{
+    padding: 10px;
+}
+
+
+.badge img
+{
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+}
+
+footer
+{
+    background: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 2%;
+    position: relative;
+    bottom: -17vh;
+}
+
+
+@media (max-width: 480px)
+{
+    .indexbanner
+    {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .box1 img
+    {
+        width: 220px;
+        height: 220px;
+    }
+
+    .badge img
+    {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    video
+    {
+        
+        width: 250px;
+        
+    }
+
+}
+
+@media (min-width: 650px)
+{
+    video
+    {
+        width: 300px;
+        margin-top: -200px;
+        margin-left: 380px;
+    }
+
+}
+
+@media (min-width: 790px)
+{
+    video
+    {
+        width: 320px;
+        margin-top: -200px;
+        margin-left: 450px;
+    }
+
+}
+
+@media (min-width: 1100px)
+{
+    video
+    {
+        width: 400px;
+        margin-top: -200px;
+        margin-left: 520px;
+    }
+}
+
+/* HOMEPAGE-PART-END */

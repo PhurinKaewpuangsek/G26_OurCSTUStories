@@ -200,34 +200,6 @@ nav
     padding-top: 80px;
 }
 
-.banner-info
-{
-    width: 100vh;
-    color: #ffffff;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    padding: 40px;
-}
-
-.banner-info h1
-{
-    font-size: 48px;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    animation: glow1 1.5s infinite alternate;
-}
-
-@keyframes glow1
-{
-    from 
-    {
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    }
-    to 
-    {
-        text-shadow: 2px 2px 15px rgba(255, 255, 255, 1);
-    }
-}
-
 .indexbanner-info
 {
     width: 100vh;
@@ -273,24 +245,10 @@ nav
    border-color: #1a1a1a; 
 }
 
-.banner-info h1
-{
-    text-align: center;
-    font-size: 50px;
-    margin: 50px;
-}
-
 .indexbanner-info p
 {
     margin: 20px;
     font-size: clamp(0.75rem, 0.659rem + 0.455vw, 1rem);
-}
-
-.banner-info p
-{
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
 }
 
 #aboutme

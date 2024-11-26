@@ -257,7 +257,7 @@ nav
     color: white;
     margin: 0;
     padding: 0;
-    height: 125vh;
+   
     width: auto;
     display: flex;
     align-items: center;
@@ -277,6 +277,7 @@ nav
     box-shadow: 0 0 50px rgba(70, 130, 180, 0.8);
     transform: translate(-7px, -7px);
     transition: all 0.3s ease;
+    margin: 40px;
 }
 
 .box2
@@ -290,6 +291,7 @@ nav
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
     transform: translate(-7px, -7px);
     transition: all 0.3s ease;
+    
 }
 
 
@@ -448,39 +450,44 @@ footer
     }
 }
 
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(13, 27, 42, 0.85);
-    color: #ffffff;
-    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
     padding: 20px;
-    width: 90%; 
-    max-width: 960px;
-    box-shadow: 0 0 50px rgba(70, 130, 180, 0.8);
-    transform: translate(0, 0);
-    transition: all 0.3s ease;
-    margin: 20px auto; 
+    background-color: rgba(13, 27, 42, 0.85); 
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px;
 }
+
+
+form h3 {
+    color: #00bfff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 
 form label {
     font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
-    width: 100%;
+    margin-bottom: 8px;
 }
+
 
 form input,
 form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 2px solid #1f6f8b;
+    border: 1px solid #1f6f8b;
     border-radius: 5px;
     background-color: #f2f2f2;
+    color: #333;
     font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
+
 
 form button {
     background-color: #1f6f8b;
@@ -491,6 +498,9 @@ form button {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 form button:hover {
@@ -498,18 +508,35 @@ form button:hover {
     transform: scale(1.05);
 }
 
-form textarea {
-    resize: none; 
+
+.commentsListContainer {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(13, 27, 42, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-    form {
-        padding: 15px;
-    }
-
-    form button {
-        font-size: 12px;
-    }
+.commentsListContainer h3 {
+    color: #00bfff; 
+    text-align: center;
 }
+
+.outputBox {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.outputBox p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
 
 /* HOMEPAGE-PART-END */

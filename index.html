@@ -82,18 +82,26 @@
                 </div>
             </div>
 
-            <div class="commentForm">
-                <form id="commentForm">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            <form id="commentForm">
+                <h3>Comment</h3>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
         
-                    <label for="comment">Comment :</label>
-                    <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..." required></textarea>
-        
-                    <button type="button" id="submitBtn">Submit</button>
-                </form>
+            <div class="commentsListContainer">
+                <h3>Comment List</h3>
+                <div id="output" class="outputBox">
+                
+                </div>
             </div>
-
+            
+            <script src="script.js"></script>
+            
         </section>
         
         

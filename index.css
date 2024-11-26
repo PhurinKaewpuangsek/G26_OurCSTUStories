@@ -512,6 +512,7 @@ form button:hover {
 .commentsListContainer {
     width: 90%;
     max-width: 600px;
+    margin-top: 30px;
     padding: 20px;
     background-color: rgba(13, 27, 42, 0.85);
     border-radius: 15px;
@@ -519,24 +520,21 @@ form button:hover {
 }
 
 .commentsListContainer h3 {
-    color: #00bfff; 
+    color: #00bfff; /* สีฟ้า */
     text-align: center;
 }
 
 .outputBox {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* ฉากหลังโปร่งแสง */
     padding: 15px;
     margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 16px;
+    width: 100%; /* ให้กล่องขยายเต็มที่ */
+    word-wrap: break-word; /* ตัดข้อความที่ยาวเกิน */
+    overflow-wrap: break-word; /* ตัดคำยาวเป็นบรรทัดใหม่ */
 }
-
-.outputBox p {
-    margin: 10px 0;
-    line-height: 1.5;
-}
-
 
 /* HOMEPAGE-PART-END */

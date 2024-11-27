@@ -85,6 +85,7 @@
 .yearbox img
 {
     width: 15vh;
+    cursor: pointer;
 }
 
 .yearbox h3

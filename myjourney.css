@@ -125,3 +125,156 @@
 
 
 /* JOURNEY PART-END */
+/* Responsive Design - START */
+
+/* สำหรับหน้าจอมือถือ (กว้างน้อยกว่า 768px) */
+@media (max-width: 768px) {
+    .journeybody {
+        height: auto; /* ให้ปรับความสูงอัตโนมัติตามเนื้อหา */
+    }
+
+    .journeybanner {
+        height: 60vh; /* ลดความสูงของแบนเนอร์ */
+        background-size: cover; /* ปรับภาพให้เหมาะสม */
+    }
+
+    .banner-info {
+        width: 90%; /* ลดขนาดความกว้าง */
+        padding: 20px;
+    }
+
+    .banner-info h1, .banner-info h2 {
+        font-size: 24px; /* ลดขนาดฟอนต์ */
+        margin: 20px;
+        position: relative;
+        top: 2rem;
+    }
+
+    .banner-info p {
+        font-size: 16px; /* ลดขนาดฟอนต์ในข้อความ */
+    }
+
+    .Story {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็นคอลัมน์เดียว */
+        grid-gap: 30px;
+    }
+
+    .yearbox {
+        box-shadow: 5px 5px 0px 0px #000, 10px 10px 0px 0px #666;
+        transform: translate(-5px, -5px);
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .yearbox img {
+        width: 100px; /* ลดขนาดภาพ */
+    }
+
+    .yeartext p {
+        font-size: 16px; /* ลดขนาดฟอนต์ */
+    }
+}
+
+/* สำหรับแท็บเล็ต (หน้าจอระหว่าง 768px และ 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .journeybanner {
+        height: 70vh; /* ปรับความสูงของแบนเนอร์ */
+    }
+
+    .banner-info {
+        width: 80%; /* ลดขนาดความกว้างเล็กน้อย */
+        padding: 30px;
+    }
+
+    .banner-info h1, .banner-info h2 {
+        font-size: 30px; /* ลดขนาดฟอนต์เล็กน้อย */
+        position: relative;
+        top: 3rem;
+    }
+
+    .Story {
+        grid-template-columns: 1fr 1fr; /* ใช้สองคอลัมน์ */
+        grid-gap: 40px;
+    }
+
+    .yearbox img {
+        width: 120px; /* ลดขนาดภาพเล็กน้อย */
+    }
+
+    .yeartext p {
+        font-size: 17px; /* ลดขนาดฟอนต์เล็กน้อย */
+    }
+}
+
+/* สำหรับเดสก์ท็อปขนาดใหญ่ (หน้าจอมากกว่า 1024px) */
+@media (min-width: 1024px) {
+    .journeybanner {
+        height: 80vh; /* คงความสูงตามปกติ */
+        background-size: 100%; /* ใช้พื้นหลังขนาดเต็ม */
+    }
+
+    .Story {
+        grid-template-columns: 1fr 1fr; /* สองคอลัมน์สำหรับเดสก์ท็อป */
+        grid-gap: 50px;
+    }
+
+    .yearbox {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .banner-info h1,.banner-info h2{
+        font-size: 30px;
+        position: relative;
+        top: 2rem;
+        
+    }
+}
+
+/* Responsive Design - END */
+/* ปรับ layout ให้อยู่ในกรอบหน้าจอ */
+body {
+    margin: 0; /* ลบ margin ของ body เพื่อไม่ให้มีช่องว่างรอบขอบ */
+    padding: 0;
+    box-sizing: border-box; /* ให้ขอบและ padding รวมกันในขนาดองค์ประกอบ */
+}
+
+/* Story Section */
+.Story {
+    padding: 20px; /* ลด padding ของ Story */
+    box-sizing: border-box; /* ทำให้ padding และขนาดขององค์ประกอบไม่ล้น */
+}
+
+/* Year Boxes */
+.yearbox {
+    padding: 15px; /* ลด padding ภายในของ yearbox */
+    margin: auto; /* ทำให้อยู่ตรงกลางและไม่ล้น */
+    max-width: 90%; /* จำกัดความกว้างไม่ให้เกิน 90% ของหน้าจอ */
+}
+
+/* สำหรับมือถือ (หน้าจอขนาดเล็ก) */
+@media (max-width: 480px) {
+    .Story {
+        padding: 10px; /* ลด padding เพิ่มสำหรับมือถือ */
+    }
+
+    .yearbox {
+        max-width: 100%; /* ใช้ความกว้างเต็มหน้าจอ */
+        padding: 10px;
+    }
+
+    .journeybanner {
+        padding: 10px; /* ลด padding ของแบนเนอร์ */
+    }
+
+    .banner-info h1,.banner-info h2{
+        font-size: 19px;
+        position: relative;
+        top: 1rem;
+        
+    }
+
+    .banner-info p{
+        font-size: 13px;
+    }
+}

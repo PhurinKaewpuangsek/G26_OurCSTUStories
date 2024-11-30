@@ -9,7 +9,7 @@
 
 .futurebanner
 {
-    background-image: url(/G26_OurCSTUStories/resources/bg6.jpg);
+    background-image: url(/resources/bg6.jpg);
     background-repeat: no-repeat;
     background-size: 200vh;
     height: 130vh;
@@ -70,24 +70,39 @@
 /* myfuture_Body-and-banner_end */
 
 /* myfuture_quote_start */
-.quote-container 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#randomQuoteSection {
     text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.quote 
-{
-    font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #333; 
-    padding: 20px;
-    border: 1px solid #333;
-    background: rgba(255, 255, 255, 0.8); 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+#randomQuote {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
 }
+
+#newQuoteButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newQuoteButton:hover {
+    background-color: #555;
+}
+
 /* myfuture_quote_end */
 
 

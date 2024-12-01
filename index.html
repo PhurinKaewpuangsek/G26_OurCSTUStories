@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="index.css">                    <!--Linking main CSS-->                                        
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!--import Font Press Start 2P-->
         <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
     </head>
     
     <body class="indexbody">
@@ -14,8 +15,8 @@
         <!--Navbar START-->
         <nav>                       
             <div class="topbar">
-                <a href="/G26_OurCSTUStories/index.html">Our CSTU stories</a>
-                <img src="/G26_OurCSTUStories/resources/cs.png">      
+                <a href="/index.html">Our CSTU stories</a>
+                <img src="/resources/cs.png">      
             </div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">
@@ -25,7 +26,7 @@
             </label>
             <div class="menuwrap">
                <ul class="menu">  
-                <li><a href="/G26_OurCSTUStories/index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="index.html#aboutme">About</a></li> 
                 <li><a href="https://tu.ac.th/">Thammasat</a></li>
                 <li><a href="https://www.instagram.com/shin.koom/">MY.IG</a></li>
@@ -38,8 +39,8 @@
         <header class="indexbanner">
             <div class="indexbanner-info">
                 <h1>The story of Our computer science at Thammasat</h1>
-                <a href="/G26_OurCSTUStories/myjourney.html">Our Journey</a>
-                <a href="/G26_OurCSTUStories/myfuture.html">Our Future</a>
+                <a href="/myjourney.html">Our Journey</a>
+                <a href="/myfuture.html">Our Future</a>
                 <p>Website version 1.1.1</p>
                 <p>Dont forget to check my video by scrolling down</p>
             </div>
@@ -49,16 +50,15 @@
         <!--About me START-->
         <section id="aboutme">
             <h1>Meet our Team Members...</h1>
-
             <section id="team">
                 <div class="team-row">
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member1">
-                                <h3>phurin</h3>
+                                <h3>Phurin</h3>
                                 <h2>Member 1</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back1">
                                 <h3>Fun Fact!</h3>
                                 <p>This is my first website ever, and I’m excited to learn more about programming!</p>
                             </div>
@@ -68,9 +68,10 @@
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member2">
+                                <h3>Theerapat</h3>
                                 <h2>Member 2</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back2">
                                 <h3>Fun Fact!</h3>
                                 <p>Enjoys solving puzzles and playing retro games!</p>
                             </div>
@@ -80,9 +81,10 @@
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member3">
+                                <h3>Punnatat</h3>
                                 <h2>Member 3</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back3">
                                 <h3>Fun Fact!</h3>
                                 <p>Dreams of building their own game one day!</p>
                             </div>
@@ -92,9 +94,10 @@
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member4">
+                                <h3>Chatsuang</h3>
                                 <h2>Member 4</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back4">
                                 <h3>Fun Fact!</h3>
                                 <p>Loves to experiment with AI and automation tools.</p>
                             </div>
@@ -104,9 +107,10 @@
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member5">
+                                <h3>Ronnakrit</h3>
                                 <h2>Member 5</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back5">
                                 <h3>Fun Fact!</h3>
                                 <p>Enjoys designing websites with a retro aesthetic!</p>
                             </div>
@@ -116,9 +120,10 @@
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member6">
+                                <h3>Ittikaj</h3>
                                 <h2>Member 6</h2>
                             </div>
-                            <div class="team-card-back">
+                            <div class="team-card-back" id="back6">
                                 <h3>Fun Fact!</h3>
                                 <p>Wants to master JavaScript and become a frontend expert!</p>
                             </div>
@@ -126,35 +131,42 @@
                     </div>
                 </div>
             </section>
-
-            <div class="guestbook">
-            
-              <form id="commentForm">
-                <h3>Comment</h3>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
-                
-                <button type="submit" id="submitBtn">Submit</button>
-              </form>
-        
-              <div class="commentsListContainer">
-                  <h3>Comment List</h3>
-                  <div id="output" class="outputBox">
-                
-                  </div>
-               </div>
-            </div>
-            
-            <script src="script.js"></script>
-            
         </section>
-        
-        
-         <!--About me END-->
-         
+        <!--About me END-->
+
+         <!-- Guest book START-->
+        <div class="guestbook">
+
+            <select id="themeSelector">
+                <option value="default">default</option>
+                <option value="dark">Dark theme</option>
+                <option value="neon">Neon theme</option>
+            </select>            
+            
+            <form id="commentForm">
+              <h3>Comment</h3>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required placeholder="enter your username in English">
+              
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment" rows="4" required placeholder="enter your comment in here"></textarea>
+              
+              <button type="submit" id="submitBtn">Submit</button>
+            </form>
+      
+            <div class="commentsListContainer">
+                
+                <h3>Comment List</h3>
+                
+                <div id="output" class="outputBox">
+  
+                </div>
+                <button id="clearCommentsBtn" type="button">Clear Comments</button> <!-- New Button -->
+            </div>
+          <script src="script.js"></script>
+        </div>
+        <!-- Guest book END-->
+
          <!--Footer START-->
         <footer>
              <p>© Copyright 2024. Made by Phurin</p>

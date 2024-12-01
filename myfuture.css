@@ -16,6 +16,7 @@ body, h1, h2, p, ul, li, a, button {
     background-image: url(/resources/bg6.jpg);
     background-repeat: no-repeat;
     background-size: cover; /* Ensures the image scales properly */
+    background-position: left;
     min-height: 100vh; /* Allow the banner to grow dynamically based on content */
     display: flex;
     justify-content: flex-end; /* Align content to the right */

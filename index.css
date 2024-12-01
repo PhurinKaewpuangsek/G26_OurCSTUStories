@@ -189,7 +189,7 @@ nav
 
 .indexbanner
 {
-    background-image: url(/G26_OurCSTUStories/resources/bg4.gif);
+    background-image: url(/resources/bg4.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -253,11 +253,14 @@ nav
 
 #aboutme
 {
-    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77); 
+    background: linear-gradient(to bottom, #415a77, #1b263b, #000000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     color: white;
     margin: 0px;
     padding: 100px;
-    height: 220vh;
+    height: auto;
     width: auto;
 }
 
@@ -285,42 +288,42 @@ nav
 
 #member1
 {
-    background-image: url(/G26_OurCSTUStories/resources/member1.jpg);
+    background-image: url(/resources/member1.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #member2
 {
-    background-image: url(/G26_OurCSTUStories/resources/member2.jpg);
+    background-image: url(/resources/member2.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #member3
 {
-    background-image: url(/G26_OurCSTUStories/resources/member3.jpg);
+    background-image: url(/resources/member3.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #member4
 {
-    background-image: url(/G26_OurCSTUStories/resources/member4.jpg);
+    background-image: url(/resources/member4.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #member5
 {
-    background-image: url(/G26_OurCSTUStories/resources/member5.jpg);
+    background-image: url(/resources/member5.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #member6
 {
-    background-image: url(/G26_OurCSTUStories/resources/member6.jpg);
+    background-image: url(/resources/member6.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -359,19 +362,46 @@ nav
 
 .team-card-front h2
 {
+    font-size: 16px;
     margin-top: 300px;
-
+    color: #ffffff; /* White for contrast */
+    text-shadow: 0 0 3px #0095ea; /* Subtle glow for readability */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
 .team-card-front h3
 {
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 14px;
+    color: #00ffcc; /* Neon color matching the retro theme */
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #009999; /* Glowing effect */
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .team-card-back {
     background: linear-gradient(145deg, #ff7300, #ffb700);
     transform: rotateY(180deg);
+}
+
+/* Glowing border */
+.team-card-front, .team-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 /* Responsive for Smaller Screens */
@@ -406,101 +436,230 @@ footer
     }
 }
 
-.guestbook
-{
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 16px; 
-    justify-content: center;
+.guestbook {
+    background: url('/resources/bg8.gif') no-repeat center center; /* Set the background GIF */
+    background-size: cover; /* Ensure it fills the screen */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* Add space from the top */
+    color: white; 
+    width: auto;
+    min-height: 150vh; /* Make it occupy full viewport height */
 }
 
-form
-{
+form {
     width: 90%;
-    max-width: 800px;
+    max-width: 600px; /* Set max width for responsiveness */
     padding: 20px;
-    background-color: rgba(13, 27, 42, 0.85); 
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
 
 form h3 {
-    color: #00bfff;
+    color: #00bfff; /* Bright color for headings */
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 form label {
-    font-weight: bold;
+    display: block;
     margin-bottom: 8px;
+    color: white;
 }
 
 form input,
 form textarea {
     width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #1f6f8b;
     border-radius: 5px;
     background-color: #f2f2f2;
     color: #333;
     font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 15px;
 }
 
 form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     background-color: #1f6f8b;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 10px;
-    width: 100%;
-    margin-top: 20px;
 }
 
 form button:hover {
-    background-color: #2a9fd6;
-    transform: scale(1.05);
+    /* background-color: #2a9fd6; */
+    /* transform: scale(1.05); */
+    background: linear-gradient(45deg, #43ff98, #00d4ff);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
-.commentsListContainer
-{
+.commentsListContainer {
     width: 90%;
-    max-width: 800px;
-    margin-top: 30px;
+    max-width: 600px;
     padding: 20px;
-    background-color: rgba(13, 27, 42, 0.85);
+    background-color: rgba(0, 0, 0, 0.7); /* Same as form for consistency */
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    align-self: end;
+    margin-top: 20px;
 }
 
 .commentsListContainer h3 {
-    color: #00bfff; /* สีฟ้า */
+    color: #00bfff;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.outputBox {
-    background-color: rgba(255, 255, 255, 0.1); /* ฉากหลังโปร่งแสง */
+.commentCard {
+    background: rgba(255, 255, 255, 0.2);
     padding: 15px;
-    margin-top: 10px;
+    margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
+    color: #fff;
+    font-size: 15px;
+}
+
+/* Avatar styling */
+.commentAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f6f8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Alternate comment background */
+.commentCard:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Timestamp styling */
+.commentTimestamp {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: auto;
+}
+
+/* Form input glow effect */
+form input:focus,
+form textarea:focus {
+    border-color: #00bfff;
+    outline: none;
+    box-shadow: 0 0 10px #00bfff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Individual comment card */
+.commentCard {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure content wraps */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word; /* Handle long unbroken text */
+    max-width: 100%; /* Ensure it stays within the container */
+}
+
+/* Avatar styling */
+.commentAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f6f8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Alternate comment background */
+.commentCard:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Timestamp styling */
+.commentTimestamp {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: auto;
+}
+
+/* Styling for Each Comment */
+.outputBox {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 15px;
+    margin-top: 10px; /* Spacing between comments */
+    margin-bottom: 10px;
+    border-radius: 8px; /* Smooth edges */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    color: #ffffff; /* Text color */
     font-size: 16px;
-    width: 100%; /* ให้กล่องขยายเต็มที่ */
-    word-wrap: break-word; /* ตัดข้อความที่ยาวเกิน */
-    overflow-wrap: break-word; /* ตัดคำยาวเป็นบรรทัดใหม่ */
+    line-height: 1.5; /* Improved line spacing */
+    width: 100%; /* Expand to full width */
+    word-wrap: break-word; /* Prevent overflow */
+    overflow-wrap: break-word; /* Handle long words */
+}
+
+/* Add spacing between username and comment text */
+.outputBox strong {
+    color: #ff9900; /* Highlight username */
+    display: block; /* Separate from the comment text */
+    margin-bottom: 8px; /* Add space below the username */
+}
+
+/* Add subtle hover effect for comments */
+.outputBox:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); /* Neon glow effect */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .outputBox {
+        font-size: 14px; /* Reduce font size on small screens */
+        padding: 10px; /* Adjust padding */
+    }
 }
 
 strong
 {
      color: #ff9900;  /*ทำให้ username ใน comment list เป็นสีส้ม */
+}
+
+.dark-theme {
+    background: linear-gradient(to bottom, #000000, #575757, #929292 );
+
+}
+
+.neon-theme {
+    background: linear-gradient(to bottom, #000000, #66dbff, #ffc62b );
+    color: #fff;
 }
 
 /* HOMEPAGE-PART-END */

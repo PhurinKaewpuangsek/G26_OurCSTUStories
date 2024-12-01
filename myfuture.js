@@ -28,3 +28,56 @@ newQuoteButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     randomQuoteElement.textContent = quotes[randomIndex];
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const goals = [
+        {
+            title: "Software Engineer",
+            summary: "A future where I develop cutting-edge software solutions.",
+            details: "I aspire to become a software engineer who designs scalable, innovative systems that make an impact in people's lives. Whether it's solving complex problems or creating seamless user experiences, I want to lead with creativity and skill."
+        },
+        {
+            title: "Cybersecurity Specialist",
+            summary: "Securing the digital world one step at a time.",
+            details: "In an increasingly connected world, cybersecurity is more important than ever. My goal is to ensure the safety of digital systems, protecting individuals and organizations from threats while fostering trust in technology."
+        },
+        {
+            title: "AI Innovator",
+            summary: "Exploring the frontier of artificial intelligence.",
+            details: "Artificial intelligence has the power to change the world. I dream of working on AI systems that can solve real-world problems, enhance human capabilities, and create a smarter future for everyone."
+        },
+        {
+            title: "Global Collaborator",
+            summary: "Connecting with diverse teams across the globe.",
+            details: "Collaboration is key to success in any field. I envision myself working with experts from around the world, sharing knowledge, and creating solutions that benefit communities globally."
+        },
+    ];
+
+    const visionBoardContainer = document.getElementById('visionBoardContainer');
+
+    function createVisionCard(goal) {
+        const card = document.createElement('div');
+        card.classList.add('visionCard');
+        card.innerHTML = `
+            <h3>${goal.title}</h3>
+            <p>${goal.summary}</p>
+            <div class="visionCardDetails">
+                <h3>${goal.title}</h3>
+                <p>${goal.details}</p>
+            </div>
+        `;
+
+        card.addEventListener('click', () => {
+            const details = card.querySelector('.visionCardDetails');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        });
+
+        return card;
+    }
+
+    // Populate the vision board with goals
+    goals.forEach(goal => {
+        const card = createVisionCard(goal);
+        visionBoardContainer.appendChild(card);
+    });
+});

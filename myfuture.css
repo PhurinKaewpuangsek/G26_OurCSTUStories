@@ -105,5 +105,37 @@
 
 /* myfuture_quote_end */
 
+/* Vision Board Card Styling */
+.visionCard {
+    background-color: rgba(0, 50, 100, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visionCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+
+/* Hidden details section initially */
+.visionCardDetails {
+    display: none;
+    margin-top: 10px;
+    background: rgba(0, 50, 100, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Visible when clicked */
+.visionCardDetails p {
+    font-size: 1rem;
+}
+
+
 
 /* FUTURE-PART-END */

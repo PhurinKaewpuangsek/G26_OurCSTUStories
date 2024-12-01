@@ -1,29 +1,32 @@
-/* FUTURE-PART-START */
-
-
-/* myfuture_Body-and-banner_start */
-.futurebody
-{
-   height: 100%;
+/* General Reset */
+body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.futurebanner
-{
-    background-image: url(/G26_OurCSTUStories/resources/bg6.jpg);
+/* Body Styling */
+.futurebody {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Future Banner Styling */
+.futurebanner {
+    background-image: url(/resources/bg6.jpg);
     background-repeat: no-repeat;
-    background-size: 200vh;
-    height: 130vh;
+    background-size: cover; /* Ensures the image scales properly */
+    min-height: 100vh; /* Allow the banner to grow dynamically based on content */
     display: flex;
-    justify-content: right;
-    align-items: right;
-    padding-top: 80px;
-    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Vertically center the content */
+    padding: 20px;
+    margin-bottom: 40px; /* Add space below the banner */
 }
 
-.futurebanner-info
-{
+.futurebanner-info {
     width: 45%;
-    height: 85%;
+    max-width: 600px;
     padding: 20px;
     background: rgba(0, 0, 50, 0.7); 
     border: 2px solid rgba(0, 255, 255, 0.7);
@@ -32,49 +35,41 @@
     border-radius: 10px;
     text-align: left;
     animation: glow2 1.5s infinite alternate;
-    align-content: center;
 }
 
-@keyframes glow2
-{
-    from 
-    {
+@keyframes glow2 {
+    from {
         box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
     }
-    to 
-    {
+    to {
         box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
     }
 }
 
-.futurebanner-info h1 
-{
-    font-size: 2rem;
+.futurebanner-info h1 {
+    font-size: 1.5rem;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.futurebanner-info h2
-{
+.futurebanner-info h2 {
     font-size: 1rem;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    margin-bottom: 10px;
 }
 
-.futurebanner-info p
-{
-    font-size: 1.2rem;
+.futurebanner-info p {
+    font-size: 1rem;
     line-height: 1.5;
     font-family: 'Roboto Mono', monospace;
-    padding: 30px;
 }
-/* myfuture_Body-and-banner_end */
 
-/* myfuture_quote_start */
+/* Random Quote Section */
 #randomQuoteSection {
     text-align: center;
-    margin: 30px auto;
+    margin: 40px auto; /* Top margin to avoid overlap */
     padding: 20px;
-    max-width: 600px;
+    max-width: 90%; /* Adjust for smaller screens */
     border: 2px solid #ddd;
     border-radius: 10px;
     background-color: #f4f4f9;
@@ -83,7 +78,7 @@
 
 #randomQuote {
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     margin-bottom: 15px;
 }
@@ -102,8 +97,6 @@
 #newQuoteButton:hover {
     background-color: #555;
 }
-
-/* myfuture_quote_end */
 
 /* Vision Board Card Styling */
 .visionCard {
@@ -136,6 +129,56 @@
     font-size: 1rem;
 }
 
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
 
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .futurebanner {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align content */
+        padding: 20px;
+    }
 
-/* FUTURE-PART-END */
+    .futurebanner-info {
+        width: 90%; /* Full width on smaller screens */
+        text-align: center; /* Center align text for readability */
+        margin-bottom: 20px;
+    }
+
+    #randomQuoteSection {
+        margin-top: 20px; /* Additional margin for separation */
+    }
+}
+
+@media (max-width: 480px) {
+    .futurebanner {
+        min-height: 70vh; /* Allow extra space for smaller screens */
+        padding: 10px;
+    }
+
+    .futurebanner-info {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #randomQuote {
+        font-size: 12px;
+    }
+
+    #newQuoteButton {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .visionCard {
+        flex: 1 1 100%; /* Full width on small devices */
+        max-width: 100%; /* Prevent overflow */
+        padding: 15px;
+    }
+}

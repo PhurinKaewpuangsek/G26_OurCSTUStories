@@ -194,7 +194,7 @@ nav
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: left;
     padding-top: 80px;
@@ -264,13 +264,28 @@ nav
     width: auto;
 }
 
-#aboutme h1
-{
+#aboutme h1 {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 0.9310344827586207rem + 2.7586206896551726vw, 3rem);
     text-align: center;
-    font-size: 20px;
+    text-shadow: 0 0 10px rgb(97, 97, 97), 0 0 20px rgb(73, 73, 73);
+    animation: glow 2s infinite alternate;
 }
 
-/* teamcard start */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(97, 97, 97), 0 0 20px rgb(73, 73, 73);
+    }
+    to {
+        text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 40px rgb(0, 0, 0);
+    }
+}
+
+#team
+{
+    margin-top: 50px;
+}
+
 .team-row {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +294,6 @@ nav
     margin: 50px 0;
 }
 
-/* Team Card */
 .team-card {
     width: 210px;
     height: 400px;
@@ -328,6 +342,68 @@ nav
     background-size: cover;
 }
 
+#back1
+{
+    background-image: url(/resources/back1.gif), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #ffffff;
+    filter: brightness(2);
+    text-shadow: 0 0 10px rgb(0, 60, 255); 
+}
+
+#back2
+{
+    background-image: url(/resources/back2.gif), linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #000000;
+    filter: brightness(2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
+
+#back3
+{
+    background-image: url(/resources/back3.gif), linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(255, 0, 128); 
+
+}
+
+#back4
+{
+    background-image: url(/resources/back4.gif), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(118, 255, 191, 0.808); 
+}
+
+#back5
+{
+    background-image: url(/resources/back5.gif), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.911));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(139, 97, 255);
+}
+
+#back6
+{
+    background-image: url(/resources/back6.gif);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(255, 115, 0); 
+}
+
 .team-card-inner {
     width: 100%;
     height: 100%;
@@ -362,11 +438,12 @@ nav
 
 .team-card-front h2
 {
-    font-size: 16px;
+    font-size: 0.8125rem;
+    font-size: clamp(0.8125rem, 0.7413793103448276rem + 0.3448275862068966vw, 1rem);
     margin-top: 300px;
-    color: #ffffff; /* White for contrast */
-    text-shadow: 0 0 3px #0095ea; /* Subtle glow for readability */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #ffffff; 
+    text-shadow: 0 0 3px #0095ea; 
+    background: rgba(0, 0, 0, 0.6); 
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: 500;
@@ -375,9 +452,10 @@ nav
 .team-card-front h3
 {
     margin-top: 0px;
-    font-size: 14px;
-    color: #00ffcc; /* Neon color matching the retro theme */
-    text-shadow: 0 0 5px #00ffcc, 0 0 10px #009999; /* Glowing effect */
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.7025862068965517rem + 0.22988505747126436vw, 0.875rem);
+    color: #00ffcc; 
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #009999; 
     letter-spacing: 1px;
     font-weight: bold;
 }
@@ -387,7 +465,6 @@ nav
     transform: rotateY(180deg);
 }
 
-/* Glowing border */
 .team-card-front, .team-card-back {
     position: absolute;
     width: 100%;
@@ -404,15 +481,47 @@ nav
     background-clip: padding-box;
 }
 
-/* Responsive for Smaller Screens */
 @media (max-width: 768px) {
     .team-card {
         width: 150px;
         height: 250px;
     }
+
+    .team-card-front h2
+    {
+        margin-top: 180px;
+    }
+
 }
 
-/* teamcard end */
+.team-card-back h3 {
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.5603448275862069rem + 0.9195402298850575vw, 1.25rem);
+    font-weight: bold;
+    margin: 0;
+
+}
+
+#back3 h3 {
+    color: #ffed78; 
+    text-shadow: 0 0 8px rgb(255, 255, 0), 0 0 15px #ff9900;
+}
+
+.team-card-back p {
+    font-size: 0.625rem;
+    font-size: clamp(0.625rem, 0.5301724137931034rem + 0.45977011494252873vw, 0.875rem);
+    color: #fff;
+    margin: 10px 0;
+    line-height: 1.6;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+#back2 p
+{
+    background: none;
+}
 
 footer
 {
@@ -482,7 +591,8 @@ form textarea {
     font-size: 14px;
 }
 
-form button {
+form button
+{
     width: 100%;
     padding: 10px;
     border: none;
@@ -494,9 +604,8 @@ form button {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-form button:hover {
-    /* background-color: #2a9fd6; */
-    /* transform: scale(1.05); */
+form button:hover
+{
     background: linear-gradient(45deg, #43ff98, #00d4ff);
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
@@ -528,7 +637,6 @@ form button:hover {
     font-size: 15px;
 }
 
-/* Avatar styling */
 .commentAvatar {
     width: 40px;
     height: 40px;
@@ -543,19 +651,16 @@ form button:hover {
     text-transform: uppercase;
 }
 
-/* Alternate comment background */
 .commentCard:nth-child(odd) {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Timestamp styling */
 .commentTimestamp {
     font-size: 12px;
     color: #ccc;
     margin-left: auto;
 }
 
-/* Form input glow effect */
 form input:focus,
 form textarea:focus {
     border-color: #00bfff;
@@ -564,7 +669,6 @@ form textarea:focus {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Individual comment card */
 .commentCard {
     background: rgba(255, 255, 255, 0.2);
     padding: 15px;
@@ -582,7 +686,6 @@ form textarea:focus {
     max-width: 100%; /* Ensure it stays within the container */
 }
 
-/* Avatar styling */
 .commentAvatar {
     width: 40px;
     height: 40px;
@@ -597,19 +700,16 @@ form textarea:focus {
     text-transform: uppercase;
 }
 
-/* Alternate comment background */
 .commentCard:nth-child(odd) {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Timestamp styling */
 .commentTimestamp {
     font-size: 12px;
     color: #ccc;
     margin-left: auto;
 }
 
-/* Styling for Each Comment */
 .outputBox {
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     padding: 15px;
@@ -625,14 +725,12 @@ form textarea:focus {
     overflow-wrap: break-word; /* Handle long words */
 }
 
-/* Add spacing between username and comment text */
 .outputBox strong {
     color: #ff9900; /* Highlight username */
     display: block; /* Separate from the comment text */
     margin-bottom: 8px; /* Add space below the username */
 }
 
-/* Add subtle hover effect for comments */
 .outputBox:hover {
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.5); /* Neon glow effect */
     transform: scale(1.02); /* Slightly enlarge on hover */
@@ -652,14 +750,119 @@ strong
      color: #ff9900;  /*ทำให้ username ใน comment list เป็นสีส้ม */
 }
 
-.dark-theme {
+.dark-theme
+{
     background: linear-gradient(to bottom, #000000, #575757, #929292 );
 
 }
 
-.neon-theme {
+.neon-theme
+{
     background: linear-gradient(to bottom, #000000, #66dbff, #ffc62b );
     color: #fff;
 }
 
+.retro-button
+{
+    font-family: 'Press Start 2P', monospace; /* Retro font */
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(90deg, #144166, #000080); /* Retro gradient */
+    border: 2px solid #ffffff; /* Bright pink border for retro pop */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 10px #0051ff, 0px 0px 20px #000080; /* Glow effect */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 4px; /* Slightly rounded for polish */
+}
+
+.retro-button:hover
+{
+    transform: scale(1.1); /* Slight zoom */
+    box-shadow: 0px 0px 20px #4f4db9, 0px 0px 30px #6a0dad; /* Stronger glow */
+}
+
+.retro-button:active
+{
+    transform: scale(0.95); /* Press effect */
+    box-shadow: 0px 0px 5px #ff007f, 0px 0px 10px #000080; /* Dim glow */
+}
+
+.flipped
+{
+    transform: rotateY(180deg);
+}
+
+.controls
+{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-website
+{
+    background: linear-gradient(90deg, #144166, #000080); 
+    border: 2px solid #ffffff; /* Subtle purple-gray border */
+    border-radius: 10px;
+    color: #cfcff0; /* Soft white/purple text tone */
+    padding: 70px 20px 30px; /* Extra padding at the bottom for badges */
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #0051ff, 0px 0px 20px #000080; /* Soft glow */
+    font-family: 'Roboto', sans-serif; /* Minimal and clean font */
+    text-align: center;
+    position: relative; /* To manage badges position */
+    margin-top: 150px;
+}
+  
+.about-website h2
+{
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.8103448275862069rem + 0.9195402298850575vw, 1.5rem);
+    color: #ffffff; /* Muted neon purple */
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #6b5eff; /* Subtle glow */
+}
+  
+.about-website p
+{
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6551724137931034rem + 0.45977011494252873vw, 1rem);
+    line-height: 1.5;
+    margin: 0;
+    color: #a1a1d6; /* Softer purple text tone */
+}
+  
+.badge
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    margin-top: 20px;
+}
+  
+.badge img
+{
+    width: 100px; /* Increased size */
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+  
+.badge img:hover
+{
+    transform: scale(1.15); 
+}
+  
+  @media (max-width: 480px) {
+    .badge img {
+      width: 45px; 
+      height: 45px;
+    }
+  }
+  
 /* HOMEPAGE-PART-END */

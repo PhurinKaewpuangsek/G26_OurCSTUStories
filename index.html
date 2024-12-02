@@ -41,15 +41,20 @@
                 <h1>The story of Our computer science at Thammasat</h1>
                 <a href="/myjourney.html">Our Journey</a>
                 <a href="/myfuture.html">Our Future</a>
-                <p>Website version 1.1.1</p>
-                <p>Dont forget to check my video by scrolling down</p>
+                <p>Website version 1.1.2</p>
+                <p>Dont forget to check on what we were prepare for you by scrolling down</p>
             </div>
         </header>
         <!--Banner END-->
         
         <!--About me START-->
         <section id="aboutme">
-            <h1>Meet our Team Members...</h1>
+            <h1>Meet our Team Members</h1>
+
+            <div class="controls">
+                <button id="flipAllButton" class="retro-button">Flip The Cards</button>
+            </div>            
+            
             <section id="team">
                 <div class="team-row">
                     <div class="team-card">
@@ -59,21 +64,21 @@
                                 <h2>Member 1</h2>
                             </div>
                             <div class="team-card-back" id="back1">
-                                <h3>Fun Fact!</h3>
-                                <p>This is my first website ever, and I’m excited to learn more about programming!</p>
+                                <h3>TEAM LEADER</h3>
+                                <p>The one who brought everyone in to this chaotic website</p>
                             </div>
                         </div>
                     </div>
-            
+                
                     <div class="team-card">
                         <div class="team-card-inner">
                             <div class="team-card-front" id="member2">
-                                <h3>Theerapat</h3>
+                                <h3>Theeraphat</h3>
                                 <h2>Member 2</h2>
                             </div>
                             <div class="team-card-back" id="back2">
-                                <h3>Fun Fact!</h3>
-                                <p>Enjoys solving puzzles and playing retro games!</p>
+                                <h3>OURFUTURE DEV</h3>
+                                <p>Spend most of his time planning future for everyone</p>
                             </div>
                         </div>
                     </div>
@@ -85,8 +90,8 @@
                                 <h2>Member 3</h2>
                             </div>
                             <div class="team-card-back" id="back3">
-                                <h3>Fun Fact!</h3>
-                                <p>Dreams of building their own game one day!</p>
+                                <h3>JS-DEV</h3>
+                                <p>Without him guestbook wont be able to work properly</p>
                             </div>
                         </div>
                     </div>
@@ -98,8 +103,8 @@
                                 <h2>Member 4</h2>
                             </div>
                             <div class="team-card-back" id="back4">
-                                <h3>Fun Fact!</h3>
-                                <p>Loves to experiment with AI and automation tools.</p>
+                                <h3>OURJOURNEY DEV</h3>
+                                <p>He's a sophomore from year 2 we glad to have him help guiding us</p>
                             </div>
                         </div>
                     </div>
@@ -111,8 +116,8 @@
                                 <h2>Member 5</h2>
                             </div>
                             <div class="team-card-back" id="back5">
-                                <h3>Fun Fact!</h3>
-                                <p>Enjoys designing websites with a retro aesthetic!</p>
+                                <h3>OURJOURNEY DEV</h3>
+                                <p>Help to shape our mind in to word and put it in each box about our journey</p>
                             </div>
                         </div>
                     </div>
@@ -124,13 +129,27 @@
                                 <h2>Member 6</h2>
                             </div>
                             <div class="team-card-back" id="back6">
-                                <h3>Fun Fact!</h3>
-                                <p>Wants to master JavaScript and become a frontend expert!</p>
+                                <h3>Presenter</h3>
+                                <p>He's the one who telling about how amazing our website is</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <div class="about-website">
+                <h2>About This Website</h2>
+                <p>
+                  A glimpse into our journey as Computer Science students at Thammasat University—this website showcases our growth, creativity, and teamwork.
+                </p>
+                <h2>Our skills</h2>
+                <div class="badge">
+                  <img src="/resources/HTML.png" alt="HTML Badge">
+                  <img src="/resources/CSS.png" alt="CSS Badge">
+                  <img src="/resources/JS.png" alt="JavaScript Badge">
+                </div>
+            </div>              
+                      
         </section>
         <!--About me END-->
 
@@ -144,12 +163,12 @@
             </select>            
             
             <form id="commentForm">
-              <h3>Comment</h3>
+              <h3>Guest books</h3>
               <label for="username">Username:</label>
               <input type="text" id="username" name="username" required placeholder="enter your username in English">
               
               <label for="comment">Comment:</label>
-              <textarea id="comment" name="comment" rows="4" required placeholder="enter your comment in here"></textarea>
+              <textarea id="comment" name="comment" rows="4" required placeholder="Let us know what do you think about our website"></textarea>
               
               <button type="submit" id="submitBtn">Submit</button>
             </form>

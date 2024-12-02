@@ -77,5 +77,36 @@ document.getElementById("themeSelector").addEventListener("change", (e) => {
     guestbook.className = `guestbook ${theme}-theme`; // Add theme-specific classes
 });
 
+// Select all the cards
+const cards = document.querySelectorAll('.team-card-inner');
+
+// Select the flip button
+const flipAllButton = document.getElementById('flipAllButton');
+
+// Set cards to the back side by default on page load
+window.addEventListener('DOMContentLoaded', () => {
+    cards.forEach(card => {
+        card.classList.add('flipped'); // Set to back side
+    });
+});
+
+// Track the flip state
+let allFlipped = true; // Start with all cards flipped (back side)
+
+// Add event listener to the button
+flipAllButton.addEventListener('click', () => {
+    allFlipped = !allFlipped; // Toggle the flip state
+
+    // Flip cards one by one with a delay
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            if (allFlipped) {
+                card.classList.add('flipped'); // Flip to back side
+            } else {
+                card.classList.remove('flipped'); // Flip to front side
+            }
+        }, index * 300); // 300ms delay between flips
+    });
+});
 
 window.onload = displayComments;
